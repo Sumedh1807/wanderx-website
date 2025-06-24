@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderX Tours</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body { background: #f4f4f4; color: #333; }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 48px; }
+    header p { font-size: 20px; margin-top: 10px; }
+
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .tours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .tour-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .tour-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WanderX Tours</h1>
+    <p>Explore. Dream. Discover.</p>
+  </header>
+
+  <nav>
+    <a href="#tours">Tours</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="tours">
+    <h2>Our Tour Packages</h2>
+    <div class="tours">
+      <div class="tour-card">
+        <img src="https://source.unsplash.com/300x200/?beach" alt="Beach Tour">
+        <h3>Beach Paradise</h3>
+        <p>5 Days in Goa | Starting at ₹15,000</p>
+      </div>
+      <div class="tour-card">
+        <img src="https://source.unsplash.com/300x200/?mountains" alt="Mountain Tour">
+        <h3>Himalayan Escape</h3>
+        <p>7 Days in Himachal | Starting at ₹22,000</p>
+      </div>
+      <div class="tour-card">
+        <img src="https://source.unsplash.com/300x200/?desert" alt="Desert Tour">
+        <h3>Rajasthan Royal</h3>
+        <p>6 Days in Jaipur & Jaisalmer | Starting at ₹18,500</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>WanderX Tours is your trusted travel partner offering curated tour packages across India. Whether you're looking for adventure, relaxation, or culture, we've got the perfect plan for you.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Book a Tour / Contact Us</h2>
+    <form onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message or Tour Preference" rows="5"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 WanderX Tours. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
